@@ -1,0 +1,64 @@
+
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=120mm},
+  edge from parent/.style={->,draw},
+  >=latex,
+  every node/.style={basic,inner sep=3pt}
+  ]
+
+% The first level
+\node[align=center](c1){VP \\ Optical Units};
+\node[right= of c1,align=center](c2){VP \\ Tape Drives};
+\node[right= of c2,align=center](c3){VP \\ Sign. Verification};
+\node[right= of c3,align=center](c4){VP \\ Data Transfer};
+\path (c1) -- (c4) node[pos=.5,draw=none](mid){};
+
+% root
+\node[above = 1 of mid](root){CEO};
+
+\begin{scope}[node distance=-\pgflinewidth and 1cm]
+
+\node[below = 10pt of c1, xshift=15pt](c11){Engineering};
+\node[below =  of c11](c12){Marketing};
+\node[below =  of c12](c13){Manufacturing};
+\node[below =  of c13](c14){Admin.};
+
+\node[below = 10pt of c2, xshift=15pt](c21){Engineering};
+\node[below = of c21](c22){Marketing};
+\node[below = of c22](c23){Manufacturing};
+\node[below =  of c23](c24){Admin.};
+
+\node[below = 10pt of c3, xshift=15pt](c31){Engineering};
+\node[below = of c31](c32){Marketing};
+\node[below = of c32](c33){Manufacturing};
+\node[below =  of c33](c34){Admin.};
+
+\node[below = 10pt of c4, xshift=15pt](c41){Engineering};
+\node[below = of c41](c42){Marketing};
+\node[below = of c42](c43){Manufacturing};
+\node[below =  of c43](c44){Admin.};
+
+\end{scope}
+
+% lines from root to level 1
+\draw (root.south) -- ++(0,-13pt) -| (c1.north);
+\draw (root.south) -- ++(0,-13pt) -| (c2.north);
+\draw (root.south) -- ++(0,-13pt) -| (c3.north);
+\draw (root.south) -- ++(0,-13pt) -| (c4.north);
+
+%coordinate[pos=0.05] (aux) 
+% lines from each level 1 node to every one of its "children"
+\foreach \value in {1,2,3,4}
+  \draw[->] ([xshift=6pt]c1.south west) |- (c1\value.west);
+
+\foreach \value in {1,...,4}
+  \draw[->] ([xshift=6pt]c2.south west) |- (c2\value.west);
+
+\foreach \value in {1,...,4}
+  \draw[->] ([xshift=6pt]c3.south west) |- (c3\value.west);
+  
+\foreach \value in {1,...,4}
+  \draw[->] ([xshift=6pt]c4.south west) |- (c4\value.west);
+  
+\end{tikzpicture}
+

@@ -1,0 +1,85 @@
+
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=120mm},
+  edge from parent/.style={->,draw},
+  >=latex',
+  every node/.style={basic,inner sep=3pt}
+  ]
+
+% The first level
+\node[align=center](c1){VP \\ Projects };
+\node[right= of c1,align=center](c2){VP \\ Marketing};
+\node[right= of c2,align=center](c3){VP \\ Operations};
+\node[right= of c3,align=center](c4){VP \\ Purchasing};
+\path (c1) -- (c4) node[pos=.5,draw=none](mid){};
+
+% root
+\node[above = 1 of mid](root){CEO};
+
+\begin{scope}[node distance=.5cm]
+
+\node[below =  of c1](c11){Research};
+\node[below =  of c11](c12){Start Up};
+\node[below =  of c12](c13){Opening};
+\node[below =  of c13](c14){Operating};
+
+\node[below = of c2](c21){Market Research};
+\node[below = of c21](c22){Advertising};
+\node[below = of c22](c23){Survey/Feedback};
+\node[below = of c23](c24){New Markets};
+
+\node[below = of c3](c31){Site/Menu Research};
+\node[below = of c31](c32){Product Design};
+\node[below = of c32](c33){Staffing};
+\node[below = of c33](c34){Scheduling};
+
+\node[below = of c4](c41){Supply Research};
+\node[below = of c41](c42){Init. Purchasing};
+\node[below = of c42](c43){Stocking};
+\node[below = of c43](c44){Supply};
+
+\end{scope}
+
+% lines from root to level 1
+\draw (root.south) -- ++(0,-13pt) -| (c1.north);
+\draw (root.south) -- ++(0,-13pt) -| (c2.north);
+\draw (root.south) -- ++(0,-13pt) -| (c3.north);
+\draw (root.south) -- ++(0,-13pt) -| (c4.north);
+
+
+%coordinate[pos=0.05] (aux) 
+% lines from each level 1 node to every one of its "children"
+\def\lastvalue{}
+\foreach \value [remember=\value as \lastvalue ] in {1,2,3,4}
+  \draw[-] (c1\lastvalue) -- (c1\value.north);
+
+\def\lastvalue{1}
+\foreach \value [remember=\value as \lastvalue ] in {2,3,4}
+	\draw[dashed] (c\lastvalue1.east) -- (c\value1.west);
+
+\def\lastvalue{}
+\foreach \value [remember=\value as \lastvalue ] in {1,...,4}
+  \draw[dashed] (c2\lastvalue) -- (c2\value.north);
+
+\def\lastvalue{1}
+\foreach \value [remember=\value as \lastvalue ] in {2,3,4}
+	\draw[dashed] (c\lastvalue2.east) -- (c\value2.west);
+
+\def\lastvalue{}
+\foreach \value [remember=\value as \lastvalue ] in {1,...,4}
+  \draw[dashed] (c3\lastvalue) -- (c3\value.north);
+  
+\def\lastvalue{1}
+\foreach \value [remember=\value as \lastvalue ] in {2,3,4}
+	\draw[dashed] (c\lastvalue3.east) -- (c\value3.west);
+  
+\def\lastvalue{}
+\foreach \value [remember=\value as \lastvalue ] in {1,...,4}
+  \draw[dashed] (c4\lastvalue) -- (c4\value.north);
+  
+\def\lastvalue{1}
+\foreach \value [remember=\value as \lastvalue ] in {2,3,4}
+	\draw[dashed] (c\lastvalue4.east) -- (c\value4.west);
+  
+\end{tikzpicture}
+

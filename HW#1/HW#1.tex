@@ -1,10 +1,90 @@
 \documentclass{article}
+\usepackage[margin=3.5cm]{geometry}   
 \usepackage{tikz}
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\usepackage[
+  colorlinks=true,
+  urlcolor=cyan!70!black
+  ]{hyperref}
 
+
+\tikzset{global scale/.style={
+    scale=#1,
+    every node/.style={scale=#1}
+  },
+  basic/.style={
+  draw, 
+  minimum width=2.75cm,
+  minimum height=20pt, 
+  font=\sffamily,
+  },
+}
+	
+\title{Homework I}
+\author{Gregory Williams\\GW4975\\EE 382C Program Management}
+\date{09/18/2015}
 
 \begin{document}
+	\maketitle
+	\section*{Problem 7.8}
 	
-	\include{./Graphs/7-8Graph1}
+	This first OBS is a functional organization breakdown for the company, featuring 4 major divisions headed by functional Vice Presidents.
+	The advantages of such a breakdown starts with having collective experiences and frameworks that can be shared across the organization.  This allows similar activities across the organization to be optimized. Problems with this 	organization breakdown structure stem from a lack of ownership over individual projects, which can lead to overruns in both cost and schedule. Without any central figure driving individual projects forward, there is a risk that 		projects that don't get attention from upper management will not get done.
+
+	\begin{center}
+		\input{./Graphs/7-8Graph1}
+	\end{center}
 	
+	This second OBS is a project oriented breakdown structure. The advantages with this structure revolve around high project ownership, and the ability of each section of the company to drive their project forward. The problems with 	this structure start with having a lot of duplicated resources within the company. But the career path of employees in such an organization is also unclear which may lead to long-term dissatisfaction as the ambiguity of growth 		drives away good talent.
+	
+	\begin{center}
+		\input{./Graphs/7-8Graph2}
+	\end{center}
+	
+	
+	\section*{Problem 7.12}
+	\subsection*{\quad(a)}
+	For the opening of the new restaurant I suggest the matrix organizational structure as a way to gain ownership of individual projects (in the restaurant business I'd imagine letting things go undone for any length of time means the 	competition beats you out), while maintaining the shared resources of a functional organization. With a new campus restaurant I'd imagine most employees would be wearing more than one hat which could mitigate some of the 		"multi-boss" problems inherent in the matrix structure.
+	\begin{center}
+		\input{./Graphs/7-12Graph1}
+	\end{center}
+	\subsection*{\quad(b)}
+	\subsubsection*{WP\#1}
+		\textbf{WP}: Initial Market Survey\newline
+		\textbf{Assigned}: Market Research\newline
+		\textbf{Objective}: We need to specify the type of restaurant we will be opening. Create and conduct a survey of our market of sufficient size the asks for the type of food the survey would most like to see on campus.\newline
+		\textbf{Deliverable}: Raw market research data in a programatically digestible format (preferable JSON or XML).\newline
+		\textbf{Method Suggestions}: This may be easier if the survey is conducted through electronic means, but also try to get responses from on-the-ground students. The internet can help a restaurant get exposure, but people 			have to show up or at least actually order food for us to make money. Put boots on the ground.\newline
+	\subsubsection*{WP\#2}
+		\textbf{WP}: Design Menu\newline
+		\textbf{Assigned}: Product Design\newline
+		\textbf{Objective}: We need to specify the menu we will be serving. Create a new menu, making sure that what we are serving is based both on the results gained from the Research Project.\newline
+		\textbf{Deliverable}: A menu that is clear and consistent with our research.\newline
+		\textbf{Method Suggestions}: Make sure that the contents are derived from our research, but take artistic liberty with the look. Understand that the look will have to translate well in both physical and electronic media.\newline
+	\subsubsection*{WP\#3}
+		\textbf{WP}: Stock Kitchen\newline
+		\textbf{Assigned}: Stocking\newline
+		\textbf{Objective}: We need to obtain the appropriate food-stuffs and packaging materials.\newline
+		\textbf{Deliverable}: A fully stocked kitchen ready for staff to provide all expected orders on Opening Day within reasonable target times meeting quality guidelines.\newline
+		\textbf{Method Suggestions}: We know what we are cooking and how. But try to forward-project into problems. If we are quality oriented, will there be a learning curve on any of our dishes? Will that mean wasted product? We 		need the Opening to be a good first impression more than we need it to make money. Purchase accordingly.\newline
+
+	\subsection*{\quad(c)}
+	\subsubsection*{WP\#1}
+	The Initial Market Survey will need input from the Site/Menu and the Supply Research organizations in order to produce a survey that will lead to actionable intelligence. For instance, if the survey includes questions about alcohol 	availability, but the Site/Menu Research team has discovered that the university does not allow alcohol on campus, then all responses to that question will be mostly moot (it could still give insight into our customer-base, but there 	may be more pertinent question that we could be asking. Customer attention is not an unlimited resource).
+	\newline
+	In fact, all three teams in the Research project, while have a certain level of autonomy and with their own deliverables, would help the organization at the highest level by keeping the coordination level hight. This should be helped 	by the matrix organization structure. Our projects are aligned temporally, but there will be feedback between the projects until the Opening project is complete and the Operating project is under full swing. Research will have to be 	ready to re-assess if called upon to do so be Opening or Operating project members.
+	\subsubsection*{WP\#2}
+	The Design Menu package will need a high level of coordination between the Start Up Project and the Research project in order to produce the desired deliverable. The knowledge gain from all three functional groups in the 		Research Project will feed into the decision making processes that takes place during this package. Clarification on survey results and analysis will inform the Start Up Project heavily; conflicting research deliverables will require 		that the Start Up Project and the Research Project are kept in each other's workflow until the Opening Project is complete, at which point the Start Up project resources will be spun into other projects (either new or existing), while 	the Research Project will probably 	continue for some time.
+	\subsubsection*{WP\#3}
+	The Stock Kitchen package will see the Start Up project's Purchasing resource interacting with the Stocking resource to ensure both amply space and required storage types (if code requirements that come out of the Research 		Project require meats be kept within a certain temperature range, we need to have that equipment). Stock Kitchen will also have to be interacting with Staffing to make sure that the proper amount of product is aquired to both meet 	demand from customers and the training that Staffing will certainly be coordinating. 
+	\newline
+	There is a high likelihood that the Operating Project will lean heavily on this package for knowledge in how to carry out the day-to-day functions of keeping the restaurant open and generating revenue.
+		
+	\subsection*{\quad(d)}
+	Construct a linear responsibility chart for coordinating the work among the various funcs. that are to be carried out.
+	
+	\section*{Problem 7.13}
+	You have a WBS for opening a new Restaurant on a University Campus
+	\subsection*{\quad(a)}
+	Develop another WBS and assign the original WPs to nodes in your new WBS.
 \end{document}
