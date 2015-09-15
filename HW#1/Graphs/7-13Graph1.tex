@@ -1,0 +1,57 @@
+
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=120mm},
+  edge from parent/.style={->,draw},
+  >=latex',
+  every node/.style={basic,inner sep=3pt}
+  ]
+
+% The first level
+\node[align=center](c1){Front of House };
+\node[right= 6 of c1,align=center](c2){Back of House};
+\path (c1) -- (c2) node[pos=.5,draw=none](mid){};
+
+% root
+\node[above = 1 of mid](root){New Restaurant};
+
+\begin{scope}[node distance=.5cm]
+
+\node[below left =  of c1,align=center](c11){Specification \\ of needs};
+\node[right =  of c11,align=center](c12){Front \\ Product Design};
+\node[below =  1 of c11](c13){Advertising};
+\node[below =  1 of c12](c14){Front Workforce};
+
+\node[below = of c2](c21){Process Design};
+\node[below = of c21](c22){Purchasing};
+\node[below = of c22](c23){Local Preperation};
+\node[below = of c23](c24){Back Start-up};
+\node[below = of c24](c25){Back Workforce};
+\node[below = of c25](c26){Management};
+
+\end{scope}
+
+% lines from root to level 1
+\draw (root.south) -- ++(0,-13pt) -| (c1.north);
+\draw (root.south) -- ++(0,-13pt) -| (c2.north);
+
+
+%coordinate[pos=0.05] (aux) 
+% lines from each level 1 node to every one of its "children"
+\def\lastvalue{}
+\foreach \value [remember=\value as \lastvalue ] in {1,2,3,4}
+  \draw[-] (c1\lastvalue) -- (c1\value.north);
+
+\def\lastvalue{1}
+\foreach \value [remember=\value as \lastvalue ] in {2,3,4}
+	\draw[dashed] (c\lastvalue1.east) -- (c\value1.west);
+
+\def\lastvalue{}
+\foreach \value [remember=\value as \lastvalue ] in {1,...,4}
+  \draw[dashed] (c2\lastvalue) -- (c2\value.north);
+
+\def\lastvalue{1}
+\foreach \value [remember=\value as \lastvalue ] in {2,3,4}
+	\draw[dashed] (c\lastvalue2.east) -- (c\value2.west);
+  
+\end{tikzpicture}
+
