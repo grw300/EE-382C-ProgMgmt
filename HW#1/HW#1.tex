@@ -45,9 +45,11 @@
 	\section*{Problem 7.12}
 	\subsection*{\quad(a)}
 	For the opening of the new restaurant I suggest the matrix organizational structure as a way to gain ownership of individual projects (in the restaurant business I'd imagine letting things go undone for any length of time means the 	competition beats you out), while maintaining the shared resources of a functional organization. With a new campus restaurant I'd imagine most employees would be wearing more than one hat which could mitigate some of the 		"multi-boss" problems inherent in the matrix structure.
+	
 	\begin{center}
 		\input{./Graphs/7-12Graph1}
 	\end{center}
+	
 	\subsection*{\quad(b)}
 	\subsubsection*{WP\#1}
 		\textbf{WP}: Initial Market Survey\newline
@@ -76,12 +78,31 @@
 	\subsubsection*{WP\#2}
 	The Design Menu package will need a high level of coordination between the Start Up Project and the Research project in order to produce the desired deliverable. The knowledge gain from all three functional groups in the 		Research Project will feed into the decision making processes that takes place during this package. Clarification on survey results and analysis will inform the Start Up Project heavily; conflicting research deliverables will require 		that the Start Up Project and the Research Project are kept in each other's workflow until the Opening Project is complete, at which point the Start Up project resources will be spun into other projects (either new or existing), while 	the Research Project will probably 	continue for some time.
 	\subsubsection*{WP\#3}
-	The Stock Kitchen package will see the Start Up project's Purchasing resource interacting with the Stocking resource to ensure both amply space and required storage types (if code requirements that come out of the Research 		Project require meats be kept within a certain temperature range, we need to have that equipment). Stock Kitchen will also have to be interacting with Staffing to make sure that the proper amount of product is aquired to both meet 	demand from customers and the training that Staffing will certainly be coordinating. 
+	The Stock Kitchen package will see the Start Up project's Purchasing resource interacting with the Stocking resource to ensure both amply space and required storage types (if code requirements that come out of the Research 		Project require meats be kept within a certain temperature range, we need to have that equipment). Stock Kitchen will also have to be interacting with Staffing to make sure that the proper amount of product is acquired to both meet 	demand from customers and the training that Staffing will certainly be coordinating. 
 	\newline
 	There is a high likelihood that the Operating Project will lean heavily on this package for knowledge in how to carry out the day-to-day functions of keeping the restaurant open and generating revenue.
 		
 	\subsection*{\quad(d)}
-	Construct a linear responsibility chart for coordinating the work among the various funcs. that are to be carried out.
+	%{\renewcommand{\arraystretch}{1.2} 
+	\begin{table}[h!]
+  		\begin{center}
+    		\caption{LRC for the new restaurant initial survey}
+    		\label{tab:table1}
+			
+    		\begin{tabular}{lcccc}
+				Activity & Project & Marketing & Operations & Purchasing\\
+				\hline
+      			Design Survey & P,R & A,I & I & I\\
+      			Administer Survey & R & P &  & \\
+				Collect Data & P & R & R & R \\
+				Analyze Data & I,A & P & R & \\
+				\hline
+				
+				\multicolumn{5}{c}{Key: I-$>$Informs; A-$>$Approves; R-$>$Reviews; P-$>$Primary} \\
+    		\end{tabular}
+  		\end{center}
+	\end{table}
+	%}
 	
 	\section*{Problem 7.13}
 	You have a WBS for opening a new Restaurant on a University Campus
