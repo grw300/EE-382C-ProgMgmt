@@ -17,35 +17,38 @@
 \begin{scope}[node distance=.5cm]
 
 \node[below = 0 1 of c1,align=center,rectangle split,rectangle split parts=2](c11){Specification \\ of needs
-	\nodepart{second} test\\test2\\test3
+	\nodepart{second} Conduct survey\\Study competition\\Possible food\\Possible service
 };
 \node[left = of c11,align=center,rectangle split,rectangle split parts=2](c12){Front \\ Product Design
-	\nodepart{second} test\\test2
+	\nodepart{second} \underline{Service design}\\Serving style\\Dining room
 };
-\node[below = 2 of c11,align=center,rectangle split,rectangle split parts=2](c13){Advertising
-	\nodepart{second} test
+\node[below = 1 of c11,align=center,rectangle split,rectangle split parts=2](c13){Advertising
+	\nodepart{second} On campus\\Off campus
 };
-\node[below = 2 of c12,align=center,rectangle split,rectangle split parts=2](c14){Front Workforce
-	\nodepart{second} test\\test2\\test3
+\node[below = 1 of c12,align=center,rectangle split,rectangle split parts=2](c14){Front Workforce
+	\nodepart{second} \underline{Service}\\Req'ts\\Training\\\underline{Cleaning}\\Req'ts\\Training
 };
 
 \node[below = 0 1 of c2,align=center,rectangle split,rectangle split parts=2](c21){Process Design
-	\nodepart{second} test\\test2\\test3
+	\nodepart{second} Cold dishes\\Warm dishes\\Outside food
 };
 \node[right = of c21,align=center,rectangle split,rectangle split parts=2](c22){Purchasing
-	\nodepart{second} test\\test2\\test3
+	\nodepart{second} Kitchen equip.\\Fixtures\\Furniture\\Perishables\\Staples
 };
-\node[below = 2 of c21,align=center,rectangle split,rectangle split parts=2](c23){Local Preparation
-	\nodepart{second} test\\test2\\test3
+\node[below = 1 of c21,align=center,rectangle split,rectangle split parts=2](c23){Local Preparation
+	\nodepart{second} Construction\\Electricity\\Plumbing\\Equip. installation\\Furniture
 };
-\node[below = 2 of c22,align=center,rectangle split,rectangle split parts=2](c24){Back Start-up
-	\nodepart{second} test\\test2\\test3
+\node[below = 1 of c22,align=center,rectangle split,rectangle split parts=2](c24){Start-up
+	\nodepart{second} Preparation\\Pilot run\\Analysis
 };
-\node[below = 2 of c23,align=center,rectangle split,rectangle split parts=2](c25){Back Workforce
-	\nodepart{second} test\\test2\\test3
+\node[below = 1 of c23,align=center,rectangle split,rectangle split parts=2](c25){Back Workforce
+	\nodepart{second} \underline{Kitchen}\\Req'ts\\Training
 };
-\node[below = 2 of c24,align=center,rectangle split,rectangle split parts=2](c26){Management
-	\nodepart{second} test\\test2\\test3
+\node[below = 1 of c24,align=center,rectangle split,rectangle split parts=2](c26){Management
+	\nodepart{second} All functions\\Coordination\\with university
+};
+\node[below = 1 of c25,align=center,rectangle split,rectangle split parts=2](c27){Back\\Product Design
+	\nodepart{second} \underline{Menu Design}\\Warm dishes\\Cold dishes
 };
 
 \end{scope}
@@ -68,6 +71,7 @@
 \draw[-] (c2.east) -- ++(+7pt,0) |- (c24.west);
 \draw[-] (c2.east) -- ++(+7pt,0) |- (c25.east);
 \draw[-] (c2.east) -- ++(+7pt,0) |- (c26.west);
+\draw[-] (c2.east) -- ++(+7pt,0) |- (c27.east);
   
 \end{tikzpicture}
 
