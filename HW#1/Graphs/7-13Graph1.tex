@@ -8,7 +8,7 @@
 
 % The first level
 \node[align=center](c1){Front of House };
-\node[right= 6 of c1,align=center](c2){Back of House};
+\node[right = 2 of c1,align=center](c2){Back of House};
 \path (c1) -- (c2) node[pos=.5,draw=none](mid){};
 
 % root
@@ -16,17 +16,37 @@
 
 \begin{scope}[node distance=.5cm]
 
-\node[below left =  of c1,align=center](c11){Specification \\ of needs};
-\node[right =  of c11,align=center](c12){Front \\ Product Design};
-\node[below =  1 of c11](c13){Advertising};
-\node[below =  1 of c12](c14){Front Workforce};
+\node[below = 0 1 of c1,align=center,rectangle split,rectangle split parts=2](c11){Specification \\ of needs
+	\nodepart{second} test\\test2\\test3
+};
+\node[left = of c11,align=center,rectangle split,rectangle split parts=2](c12){Front \\ Product Design
+	\nodepart{second} test\\test2
+};
+\node[below = 2 of c11,align=center,rectangle split,rectangle split parts=2](c13){Advertising
+	\nodepart{second} test
+};
+\node[below = 2 of c12,align=center,rectangle split,rectangle split parts=2](c14){Front Workforce
+	\nodepart{second} test\\test2\\test3
+};
 
-\node[below = of c2](c21){Process Design};
-\node[below = of c21](c22){Purchasing};
-\node[below = of c22](c23){Local Preperation};
-\node[below = of c23](c24){Back Start-up};
-\node[below = of c24](c25){Back Workforce};
-\node[below = of c25](c26){Management};
+\node[below = 0 1 of c2,align=center,rectangle split,rectangle split parts=2](c21){Process Design
+	\nodepart{second} test\\test2\\test3
+};
+\node[right = of c21,align=center,rectangle split,rectangle split parts=2](c22){Purchasing
+	\nodepart{second} test\\test2\\test3
+};
+\node[below = 2 of c21,align=center,rectangle split,rectangle split parts=2](c23){Local Preparation
+	\nodepart{second} test\\test2\\test3
+};
+\node[below = 2 of c22,align=center,rectangle split,rectangle split parts=2](c24){Back Start-up
+	\nodepart{second} test\\test2\\test3
+};
+\node[below = 2 of c23,align=center,rectangle split,rectangle split parts=2](c25){Back Workforce
+	\nodepart{second} test\\test2\\test3
+};
+\node[below = 2 of c24,align=center,rectangle split,rectangle split parts=2](c26){Management
+	\nodepart{second} test\\test2\\test3
+};
 
 \end{scope}
 
@@ -34,24 +54,20 @@
 \draw (root.south) -- ++(0,-13pt) -| (c1.north);
 \draw (root.south) -- ++(0,-13pt) -| (c2.north);
 
-
 %coordinate[pos=0.05] (aux) 
 % lines from each level 1 node to every one of its "children"
-\def\lastvalue{}
-\foreach \value [remember=\value as \lastvalue ] in {1,2,3,4}
-  \draw[-] (c1\lastvalue) -- (c1\value.north);
 
-\def\lastvalue{1}
-\foreach \value [remember=\value as \lastvalue ] in {2,3,4}
-	\draw[dashed] (c\lastvalue1.east) -- (c\value1.west);
+\draw[-] (c1.west) -- ++(-7pt,0) |- (c11.west);
+\draw[-] (c1.west) -- ++(-7pt,0) |- (c12.east);
+\draw[-] (c1.west) -- ++(-7pt,0) |- (c13.west);
+\draw[-] (c1.west) -- ++(-7pt,0) |- (c14.east);
 
-\def\lastvalue{}
-\foreach \value [remember=\value as \lastvalue ] in {1,...,4}
-  \draw[dashed] (c2\lastvalue) -- (c2\value.north);
-
-\def\lastvalue{1}
-\foreach \value [remember=\value as \lastvalue ] in {2,3,4}
-	\draw[dashed] (c\lastvalue2.east) -- (c\value2.west);
+\draw[-] (c2.east) -- ++(+7pt,0) |- (c21.east);
+\draw[-] (c2.east) -- ++(+7pt,0) |- (c22.west);
+\draw[-] (c2.east) -- ++(+7pt,0) |- (c23.east);
+\draw[-] (c2.east) -- ++(+7pt,0) |- (c24.west);
+\draw[-] (c2.east) -- ++(+7pt,0) |- (c25.east);
+\draw[-] (c2.east) -- ++(+7pt,0) |- (c26.west);
   
 \end{tikzpicture}
 
