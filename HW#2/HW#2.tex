@@ -65,11 +65,11 @@
 	\end{center}
 	\pagebreak
 	\subsection*{(b)}
-		{\renewcommand{\arraystretch}{1.2} 
+	{\renewcommand{\arraystretch}{1.2} 
 	\begin{table}[h!tbp]
   		\begin{center}
     		\caption{Slacks for Buying Tom Cruise a Boat}
-    		\label{tab:table1}
+    		\label{tab:table2}
 			
     		\begin{tabular}{lcccc}
 				Activity & Total Slack Eq & Total Slack & Free Slack Eq & Total Slack\\
@@ -90,7 +90,7 @@
 	\end{table}
 	}
 	
-	The total slack means that the activity may be delayed from the early start by that amount of time without affecting the total project duration; the free slack is the amount of time the activity may be delayed without delaying any other activity in the project.\\
+	\noindent The total slack means that the activity may be delayed from the early start by that amount of time without affecting the total project duration; the free slack is the amount of time the activity may be delayed without delaying any other activity in the project.\\
 	For this project, investigating the demand can be delayed for 8 weeks without affecting the overall project, but if it is delayed at all it will delay the conducting of the promotional cost analysis activity.\\
 	The pricing strategy and the the conducting of the promotional cost analysis activities can be delayed for their total slack times without delaying any other activities, as their total slacks and free slacks are equal.
 	
@@ -105,7 +105,75 @@
 	\end{center}
 	
 	\section*{Problem 9.20}
-		
+	\subsection*{(a)}
+	
+	{\renewcommand{\arraystretch}{1.2} 
+	\begin{table}[h!tbp]
+  		\begin{center}
+    		\caption{Calculated Mean and Standard Deviation}
+    		\label{tab:table3}
+			
+    		\begin{tabular}{lccccc}
+				\hline
+				&\multicolumn{3}{c}{Time estimate (weeks)} &&\\\cline{2-4}
+				Activity & Optimistic & Most likely & Pessimistic & Mean & Std. Dev.\\
+				\hline
+				A & 1 & 3 & 4  & 2.83 & 0.5\\
+				B & 1 & 1 & 2  & 1.17 & 0.17\\
+				C & 4 & 5 & 9  & 5.50 & 0.83\\
+				D & 1 & 1 & 1  & 1    & 0\\
+				E & 4 & 6 & 12 & 6.67 & 1.33\\
+				F & 1 & 1 & 2  & 1.17 & 0.17\\
+				G & 1 & 2 & 3  & 2.0  & 0.33\\
+				H & 6 & 8 & 10 & 8.0  & 0.67\\
+				\hline
+    		\end{tabular}
+  		\end{center}
+	\end{table}
+	}
+	
+	\begin{center}
+	\makebox[\textwidth]{
+		\input{./Graphs/9-20Graph1}}
+	\end{center}
+	\subsection*{(b)}
+	{\renewcommand{\arraystretch}{1.2} 
+	\begin{table}[h!tbp]
+  		\begin{center}
+    		\caption{Slacks for Buying Tom Cruise a Boat}
+    		\label{tab:table2}
+			
+    		\begin{tabular}{lcccc}
+				Activity & Total Slack Eq & Total Slack & Free Slack Eq & Total Slack\\
+				& LS - ES & & Min\{ES$_{\text{Suc}}$\} - EF & \\
+				\hline
+      			A & 9.51-0= & 9.51 & 2.83-2.83=& 0\\
+      			B & 12.2-0= & 12.2 & 13.3-1.1= & 12.2\\
+				C* && 0 && 0\\
+				D & 12.3-2.83= & 9.51 & 13.3-3.83= & 9.51\\
+				E* && 0 && 0\\
+				F* && 0 && 0\\
+				G* && 0 && 0\\
+				H* && 0 && 0\\
+				\hline
+				\multicolumn{3}{c}{* = On the Critical Path}\\
+    		\end{tabular}
+  		\end{center}
+	\end{table}
+	}
+	\subsection*{(c)}
+	\noindent Critical Path: C-E-F-G-H\newline
+	Critical Path Mean Duration: 23.3 weeks\newline
+	Critical Path Standard Deviation: $[0.83^2 + 1.33^2 + 0.17^2 + 0.33^2 + 0.67^2]^{1/2} = 1.75$
+	\newline
+	
+	\noindent The critical path activities have not changed, but the expected total duration has increased to 23.3 weeks from 22 weeks. 
+	\subsection*{(d)}
+	
+	\subsubsection*{(1)}
+	\begin{equation}
+		P\bigg(Z\le \frac{22-23.3}{1.75}\bigg) = P(Z \le -0.743) = 1 - P(Z \le 0.743) = 1 - 0.7704 = 0.23
+	\end{equation}
 	\section*{Problem 9.22}
 	
 	\section*{Problem 9.23}
