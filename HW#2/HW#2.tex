@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[margin=3.5cm]{geometry}   
-\usepackage{tikz}
+\usepackage{tikz,amsmath}
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees}
 \usepackage[
   colorlinks=true,
@@ -15,7 +15,46 @@
 	\maketitle
 	\section*{Problem 9.14}
 	
+	\begin{center}
+	\makebox[\textwidth]{
+		\input{./Graphs/9-15Graph1}}
+	\end{center}
+	Critical path: A-C-D-G-H-I-K-L-M-O \\
+	Duration: 23 days
+	\pagebreak
 	\section*{Problem 9.15}
+	
+	{\renewcommand{\arraystretch}{1.2} 
+	\begin{table}[h!tbp]
+  		\begin{center}
+    		\caption{Slacks for Buying Tom Cruise a Boat}
+    		\label{tab:table1}
+			
+    		\begin{tabular}{lcccc}
+				Activity & Total Slack Eq & Total Slack & Free Slack Eq & Total Slack\\
+				& LS - ES & & Min\{ES$_{\text{Suc}}$\} - EF & \\
+				\hline
+      			A* & & 0 & & 0\\
+      			B & 20-17= & 3 & 20-17= & 3\\
+				C* && 0 && 0\\
+				D* && 0 && 0\\
+				E & 7-5= & 2 & 7-5= & 2\\
+				F & 7-6= & 1 & 7-6= & 1\\
+				G* && 0 && 0\\
+				H* && 0 && 0\\
+				I* && 0 && 0\\
+				J & 12-11= & 1 & 12-11= & 1\\
+				K* && 0 && 0\\
+				L* && 0 && 0\\
+				M* && 0 && 0\\
+				N & 20-17= & 3 & 20-17= & 3\\
+				O* && 0 && 0\\
+				\hline
+				\multicolumn{3}{c}{* = On the Critical Path}\\
+    		\end{tabular}
+  		\end{center}
+	\end{table}
+	}
 	
 	\section*{Problem 9.19}
 	
