@@ -1,0 +1,32 @@
+
+\begin{tikzpicture}[
+  >=latex,
+  every node/.style={draw,inner sep=2pt,minimum size=1pt},
+  node distance=.65cm,
+  ]
+  \node[circle, label=90:(0),] (S){Start};
+  \node[circle split, above right = 1.2 and 1 of S, label=90:{(0,3)}, label=270:{[8,11]}] (A) {A \nodepart{lower} 3};
+  \node[circle split, right = of S, label=90:{(0,1)}, label=270:{[11,12]}] (B) {B \nodepart{lower} 1};
+  \node[circle split, below right = 1.2 and 1of S, label=90:{(0,5)}, label=270:{[0,5]}] (C) {C \nodepart{lower} 5};
+  \node[circle split, right = of A, label=90:{(3,4)}, label=270:{[11,12]}] (D) {D \nodepart{lower} 1};
+  \node[circle split, right = of C, label=90:{(5,11)}, label=270:{[5,11]}] (E) {E \nodepart{lower} 6};
+  \node[circle split, right = of E, label=90:{(11,12)}, label=270:{[11,12]}] (F) {F \nodepart{lower} 1};
+  \node[circle split, above right = 1.2 and 1of F, label=90:{(12,14)}, label=270:{[12,14]}] (G) {G \nodepart{lower} 2};
+  \node[circle split, right = of G, label=90:{(14,22)}, label=270:{[14,22]}] (H) {H \nodepart{lower} 8};
+  \node[circle, right = of H, label=90:{(22)}] (End) {End};
+  
+  
+  \draw [->] (S) -- (A);
+  \draw [->] (S) -- (B);
+  \draw [->] (S) -- (C);
+  \draw [->] (A) -- (D);
+  \draw [->] (C) -- (E);
+  \draw [->] (E) -- (F);
+  \draw [->] (B) -- (G);
+  \draw [->] (D) -- (G);
+  \draw [->] (F) -- (G);
+  \draw [->] (G) -- (H);
+  \draw [->] (H) -- (End);
+  
+\end{tikzpicture}
+

@@ -1,0 +1,16 @@
+
+\begin{ganttchart}[vgrid,hgrid,
+	bar/.append style={fill=blue!50},
+	bar incomplete/.append style={fill=Maroon},
+	]{1}{22}
+  \gantttitle{Gantt Chart for 9.19}{22} \\
+  \gantttitlelist{1,...,22}{1} \\
+	\ganttbar{A}{1}{3}\\%\ganttbar{}{5}{6} \\ %LOL, just add another bar!
+	\ganttbar{B}{1}{1} \\%\ganttbar[bar/.append style={fill=gray!30}]{}{4}{4} \\
+	\ganttbar{C}{1}{5} \\%\ganttbar[bar/.append style={fill=gray!30}]{}{7}{7} \\
+	\ganttbar{D}{4}{4} \\
+	\ganttbar{E}{6}{11} \\%\ganttbar[bar/.append style={fill=white}]{}{9}{9} \\
+	\ganttbar{F}{12}{12} \\
+	\ganttbar{G}{13}{14} \\%\ganttbar[bar/.append style={fill=gray!30}]{}{11}{11}\\
+	\ganttbar{H}{15}{22} 
+\end{ganttchart}

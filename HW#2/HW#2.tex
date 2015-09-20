@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[margin=3.5cm]{geometry}   
 \usepackage{tikz,amsmath}
+\usepackage{pgfgantt}
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees}
 \usepackage[
   colorlinks=true,
@@ -57,6 +58,51 @@
 	}
 	
 	\section*{Problem 9.19}
+	\subsection*{(a)}
+	\begin{center}
+	\makebox[\textwidth]{
+		\input{./Graphs/9-19Graph1}}
+	\end{center}
+	\pagebreak
+	\subsection*{(b)}
+		{\renewcommand{\arraystretch}{1.2} 
+	\begin{table}[h!tbp]
+  		\begin{center}
+    		\caption{Slacks for Buying Tom Cruise a Boat}
+    		\label{tab:table1}
+			
+    		\begin{tabular}{lcccc}
+				Activity & Total Slack Eq & Total Slack & Free Slack Eq & Total Slack\\
+				& LS - ES & & Min\{ES$_{\text{Suc}}$\} - EF & \\
+				\hline
+      			A & 8-0= & 8 & 3-3=& 0\\
+      			B & 11-0= & 11 & 12-1= & 11\\
+				C* && 0 && 0\\
+				D & 11-3= & 8 & 12-4= & 8\\
+				E* && 0 && 0\\
+				F* && 0 && 0\\
+				G* && 0 && 0\\
+				H* && 0 && 0\\
+				\hline
+				\multicolumn{3}{c}{* = On the Critical Path}\\
+    		\end{tabular}
+  		\end{center}
+	\end{table}
+	}
+	
+	The total slack means that the activity may be delayed from the early start by that amount of time without affecting the total project duration; the free slack is the amount of time the activity may be delayed without delaying any other activity in the project.\\
+	For this project, investigating the demand can be delayed for 8 weeks without affecting the overall project, but if it is delayed at all it will delay the conducting of the promotional cost analysis activity.\\
+	The pricing strategy and the the conducting of the promotional cost analysis activities can be delayed for their total slack times without delaying any other activities, as their total slacks and free slacks are equal.
+	
+	\subsection*{(c)}
+	Critical Path: C-E-F-G-H\\
+	For this project, the design of the product must be completed before the manufacture of the prototype models. In turn, those models must be completed before the product cost analysis, final pricing analysis, and market test activities can be completed.\\
+	This project appears to be dominated by the design, manufacture, and test of the product, which makes sense. Strategies and market analyses are useful, but ultimately worthless without a product to sell.
+	\subsection*{(d)}
+	\begin{center}
+	\makebox[\textwidth]{
+		\input{./Graphs/9-19Graph2}}
+	\end{center}
 	
 	\section*{Problem 9.20}
 		
