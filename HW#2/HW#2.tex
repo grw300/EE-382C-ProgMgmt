@@ -3,6 +3,7 @@
 \usepackage{tikz,amsmath}
 \usepackage{pgfgantt}
 \usepackage{lscape}
+\usepackage{rotating}
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees}
 \usepackage[
   colorlinks=true,
@@ -249,13 +250,13 @@
 	\end{itemize}
 	\noindent This tests us that the first priority must be the navigation and control systems.
 	
-
-	
 	\subsection*{(d)}
 	\noindent See next page.
-	\begin{landscape}
-	\scalebox{.75}{
-		\input{./Graphs/9-23Graph2}}
-	\end{landscape}
+
+	\begin{sidewaystable}[!htbp]
+		\input{./Graphs/9-23Graph2}
+	\end{sidewaystable}
+
+	\pagebreak
 	\section*{Problem 9.23}
 \end{document}
