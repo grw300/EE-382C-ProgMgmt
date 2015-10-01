@@ -1,0 +1,29 @@
+
+\begin{ganttchart}[vgrid,hgrid,
+	bar/.append style={fill=blue!50},
+	bar incomplete/.append style={fill=Maroon},
+	y unit chart=1.45cm,
+	milestone top shift=-0.10
+	]{1}{54}
+  \gantttitle{Gantt Chart for 9.22}{54} \\
+  \gantttitlelist{1,...,54}{1} \\
+	%\ganttmilestone{}{8}
+	\ganttbar{A}{1}{30} \ganttbar[bar/.append style={fill=white}]{}{31}{31} \\ %LOL, just add another bar!
+	%\ganttmilestone{}{11}
+	\ganttbar{B}{1}{15} \ganttbar[bar/.append style={fill=white}]{}{16}{31}\\
+	%\ganttmilestone{}{0}
+	\ganttbar{C}{1}{25} \\
+	%\ganttmilestone{}{11}
+	\ganttbar{D}{31}{33} \ganttbar[bar/.append style={fill=white}]{}{34}{34}\\
+	%\ganttmilestone{}{5}
+	\ganttbar{E}{26}{32} \\
+	%\ganttmilestone{}{11}
+	\ganttbar{F}{16}{16} \ganttbar[bar/.append style={fill=gray!30}]{}{17}{32}\\
+	%\ganttmilestone{}{12}
+	\ganttbar{G}{34}{38} \ganttbar[bar/.append style={fill=gray!30}]{}{39}{46}\\
+	%\ganttmilestone{}{14}
+	\ganttbar{H}{34}{35} \ganttbar[bar/.append style={fill=gray!30}]{}{36}{36}\\
+	\ganttbar{I}{33}{36}\\
+	\ganttbar{J}{37}{46}\\
+	\ganttbar{K}{47}{54}\\
+\end{ganttchart}

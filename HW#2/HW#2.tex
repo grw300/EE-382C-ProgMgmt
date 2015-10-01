@@ -2,6 +2,7 @@
 \usepackage[margin=3.5cm]{geometry}   
 \usepackage{tikz,amsmath}
 \usepackage{pgfgantt}
+\usepackage{lscape}
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees}
 \usepackage[
   colorlinks=true,
@@ -171,11 +172,90 @@
 	\subsection*{(d)}
 	
 	\subsubsection*{(1)}
-	\begin{equation}
+	\begin{equation*}
 		P\bigg(Z\le \frac{22-23.3}{1.75}\bigg) = P(Z \le -0.743) = 1 - P(Z \le 0.743) = 1 - 0.7704 = 0.23
-	\end{equation}
+	\end{equation*}
+	There is a 23\% chance that the project will be completed in 22 weeks or less.
+	
+	\subsubsection*{(2)}
+	\begin{equation*}
+		P\bigg(Z\le \frac{23.3-23.3}{1.75}\bigg) = P(Z \le 0) = 0.50
+	\end{equation*}
+	There is, by definition, a 50\% chance that the project will be completed in the mean time.
+	
+	\subsubsection*{(3)}
+	\begin{equation*}
+		P\bigg(Z\ge \frac{26-23.3}{1.75}\bigg) = 1 - P(Z \le 3.83) \cong 1 - 0.99999 \approx 0
+	\end{equation*}
+	There is a near-zero chance the project will take longer than 30 weeks.
+	
+	\begin{equation*}
+		P\bigg(Z\ge \frac{30-23.3}{1.75}\bigg) = 1 - P(Z \le 1.54) = 1 - 0.9382 = 0.062
+	\end{equation*}
+	There is about a 6.2\% chance the project will take longer than 26 weeks to complete.
 	\section*{Problem 9.22}
 	
-	\section*{Problem 9.23}
+	\subsection*{(a)}
+	\begin{center}
+	\makebox[\textwidth]{
+		\input{./Graphs/9-23Graph1}}
+	\end{center}	
 	
+	\pagebreak
+	
+	\subsection*{(b)}
+		{\renewcommand{\arraystretch}{1.2} 
+	\begin{table}[h!tbp]
+  		\begin{center}
+    		\caption{Slacks for Buying Tom Cruise a Boat}
+    		\label{tab:table2}
+			
+    		\begin{tabular}{lcccccc}
+				 & Total Slack Eq &  &  & Free Slack Eq & &\\
+				Activity & LS - ES & = & Total Slack & Min\{ES$_{\text{Suc}}$\} - EF &= & Total Slack \\
+				\hline
+      			A  & 1-0   & = & 1  & 30-30 & = & 0 \\
+      			B  & 16-0  & = & 16 & 15-15 & = & 0 \\
+				C* &       &   & 0  &       &   & 0 \\
+				D  & 31-30 & = & 1  & 33-33 & = & 0 \\
+				E* &       &   & 0  &       &   & 0 \\
+				F  & 31-15 & = & 16 & 32-16 & = & 16\\
+				G  & 41-33 & = & 8  & 46-38 & = & 8 \\
+				H  & 34-33 & = & 1  & 36-35 & = & 1 \\
+				I* &       &   & 0  &       &   & 0 \\
+				J* &       &   & 0  &       &   & 0 \\
+				K* &       &   & 0  &       &   & 0 \\
+				\hline
+				\multicolumn{3}{c}{* = On the Critical Path}\\
+    		\end{tabular}
+  		\end{center}
+	\end{table}
+	}
+	\noindent The total slack means that the activity may be delayed from the early start by that amount of time without affecting the total project duration; the free slack is the amount of time the activity may be delayed without delaying any other activity in the project.\\
+	For this project, the construction of the module shell can be delayed for 1 day, the ordering of life support system and scientific experimentation package for 16 days, the wiring of the module for 1 day, the preliminary test of the life support system for 16 days, the installation of the life support system into the module for 8 days, and the installation of the scientific experimentation package into the module for 1 day without affecting the overall project.\\
+	The the construction of the module shell, ordering of life support system and scientific experimentation package, and the wiring of the module activities cannot be delayed at all without affecting other activities as their free slack is zero.\\
+	The preliminary test of the life support system, the installation of the life support system into the module, and the installation of the scientific experimentation package into the module may be delayed for their total slack times without delaying any other activities, as their total slacks and free slacks are equal.\\
+	This tells us, almost counter-intuitively, that life support systems and scientific experimentation systems are should not be the main priorities for this project.
+	
+	\subsection*{(c)}
+	\noindent Critical Path: C-E-I-J-K\newline
+	The following activities are on the critical path and as such have no slack (must be started at their early start times and cannot be delayed without delaying the entire project):
+	\begin{itemize}
+		\item Ordering components of control and navigation systems\\
+		\item Assemble control and navigational system\\
+		\item Preliminary test of control and navigational system\\
+		\item Install control and navigational system in module\\
+		\item Final testing and debugging\\
+	\end{itemize}
+	\noindent This tests us that the first priority must be the navigation and control systems.
+	
+
+	
+	\subsection*{(d)}
+	\noindent See next page.
+	\begin{landscape}
+	\scalebox{.75}{
+		\input{./Graphs/9-23Graph2}}
+	\end{landscape}
+	\section*{Problem 9.23}
 \end{document}
