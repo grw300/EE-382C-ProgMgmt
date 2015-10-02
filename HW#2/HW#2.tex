@@ -33,25 +33,25 @@
     		\caption{Slacks for Buying Tom Cruise a Boat}
     		\label{tab:table1}
 			
-    		\begin{tabular}{lcccc}
-				Activity & Total Slack Eq & Total Slack & Free Slack Eq & Total Slack\\
-				& LS - ES & & Min\{ES$_{\text{Suc}}$\} - EF & \\
+    		\begin{tabular}{lcccccc}
+				 & Total Slack Eq &  &  & Free Slack Eq & &\\
+				Activity & LS - ES & = & Total Slack & Min\{ES$_{\text{Suc}}$\} - EF &= & Free Slack \\
 				\hline
-      			A* & & 0 & & 0\\
-      			B & 20-17= & 3 & 20-17= & 3\\
-				C* && 0 && 0\\
-				D* && 0 && 0\\
-				E & 7-5= & 2 & 7-5= & 2\\
-				F & 7-6= & 1 & 7-6= & 1\\
-				G* && 0 && 0\\
-				H* && 0 && 0\\
-				I* && 0 && 0\\
-				J & 12-11= & 1 & 12-11= & 1\\
-				K* && 0 && 0\\
-				L* && 0 && 0\\
-				M* && 0 && 0\\
-				N & 20-17= & 3 & 20-17= & 3\\
-				O* && 0 && 0\\
+      			A* & & &0 & & &0\\
+      			B & 20-17&= & 3 & 20-17&= & 3\\
+				C* &&& 0 &&& 0\\
+				D* &&& 0 &&& 0\\
+				E & 6-4&= & 2 & 7-5&= & 2\\
+				F & 5-4&= & 1 & 7-6&= & 1\\
+				G* &&& 0 &&& 0\\
+				H* &&& 0 &&& 0\\
+				I* &&& 0 &&& 0\\
+				J & 10-9&= & 1 & 12-11&= & 1\\
+				K* &&& 0 &&& 0\\
+				L* &&& 0 &&& 0\\
+				M* &&& 0 &&& 0\\
+				N & 19-26&= & 3 & 20-17&= & 3\\
+				O* &&& 0 &&& 0\\
 				\hline
 				\multicolumn{3}{c}{* = On the Critical Path}\\
     		\end{tabular}
@@ -73,18 +73,18 @@
     		\caption{Slacks for Buying Tom Cruise a Boat}
     		\label{tab:table2}
 			
-    		\begin{tabular}{lcccc}
-				Activity & Total Slack Eq & Total Slack & Free Slack Eq & Total Slack\\
-				& LS - ES & & Min\{ES$_{\text{Suc}}$\} - EF & \\
+    		\begin{tabular}{lcccccc}
+				 & Total Slack Eq &  &  & Free Slack Eq & &\\
+				Activity & LS - ES & = & Total Slack & Min\{ES$_{\text{Suc}}$\} - EF &= & Free Slack \\
 				\hline
-      			A & 8-0= & 8 & 3-3=& 0\\
-      			B & 11-0= & 11 & 12-1= & 11\\
-				C* && 0 && 0\\
-				D & 11-3= & 8 & 12-4= & 8\\
-				E* && 0 && 0\\
-				F* && 0 && 0\\
-				G* && 0 && 0\\
-				H* && 0 && 0\\
+      			A & 8-0&= & 8 & 3-3&=& 0\\
+      			B & 11-0&= & 11 & 12-1&= & 11\\
+				C* && &0 &&& 0\\
+				D & 11-3&= & 8 & 12-4&= & 8\\
+				E* &&& 0 &&& 0\\
+				F* &&& 0 &&& 0\\
+				G* &&& 0 &&& 0\\
+				H* &&& 0 &&& 0\\
 				\hline
 				\multicolumn{3}{c}{* = On the Critical Path}\\
     		\end{tabular}
@@ -145,18 +145,19 @@
     		\caption{Slacks for Buying Tom Cruise a Boat}
     		\label{tab:table2}
 			
-    		\begin{tabular}{lcccc}
-				Activity & Total Slack Eq & Total Slack & Free Slack Eq & Total Slack\\
-				& LS - ES & & Min\{ES$_{\text{Suc}}$\} - EF & \\
+    		\begin{tabular}{lcccccc}
+				 & Total Slack Eq &  &  & Free Slack Eq & &\\
+				Activity & LS - ES & = & Total Slack & Min\{ES$_{\text{Suc}}$\} - EF &= & Free Slack \\
 				\hline
-      			A & 9.51-0= & 9.51 & 2.83-2.83=& 0\\
-      			B & 12.2-0= & 12.2 & 13.3-1.1= & 12.2\\
-				C* && 0 && 0\\
-				D & 12.3-2.83= & 9.51 & 13.3-3.83= & 9.51\\
-				E* && 0 && 0\\
-				F* && 0 && 0\\
-				G* && 0 && 0\\
-				H* && 0 && 0\\
+				\hline
+      			A  & 9.51-0&= & 9.51 & 2.83-2.83&=& 0\\
+      			B  & 12.2-0&= & 12.2 & 13.3-1.1&= & 12.2\\
+				C* &       & &0 && 0\\
+				D  & 12.3-2.83&= & 9.51 & 13.3-3.83&= & 9.51\\
+				E* && &0 && 0\\
+				F* && &0 && 0\\
+				G* && &0 && 0\\
+				H* && &0 && 0\\
 				\hline
 				\multicolumn{3}{c}{* = On the Critical Path}\\
     		\end{tabular}
@@ -164,10 +165,10 @@
 	\end{table}
 	}
 	\subsection*{(c)}
-	\noindent Critical Path: C-E-F-G-H\newline
-	Critical Path Mean Duration: 23.3 weeks\newline
+	\noindent Critical Path: C-E-F-G-H\\
+	Critical Path Mean Duration: 23.3 weeks\\
 	Critical Path Standard Deviation: $[0.83^2 + 1.33^2 + 0.17^2 + 0.33^2 + 0.67^2]^{1/2} = 1.75$
-	\newline
+	\\
 	
 	\noindent The critical path activities have not changed, but the expected total duration has increased to 23.3 weeks from 22 weeks. 
 	\subsection*{(d)}
@@ -199,7 +200,7 @@
 	\subsection*{(a)}
 	\begin{center}
 	\makebox[\textwidth]{
-		\input{./Graphs/9-23Graph1}}
+		\input{./Graphs/9-22Graph1}}
 	\end{center}	
 	
 	\pagebreak
@@ -213,7 +214,7 @@
 			
     		\begin{tabular}{lcccccc}
 				 & Total Slack Eq &  &  & Free Slack Eq & &\\
-				Activity & LS - ES & = & Total Slack & Min\{ES$_{\text{Suc}}$\} - EF &= & Total Slack \\
+				Activity & LS - ES & = & Total Slack & Min\{ES$_{\text{Suc}}$\} - EF &= & Free Slack \\
 				\hline
       			A  & 1-0   & = & 1  & 30-30 & = & 0 \\
       			B  & 16-0  & = & 16 & 15-15 & = & 0 \\
@@ -254,9 +255,105 @@
 	\noindent See next page.
 
 	\begin{sidewaystable}[!htbp]
-		\input{./Graphs/9-23Graph2}
+		\input{./Graphs/9-22Graph2}
 	\end{sidewaystable}
 
 	\pagebreak
 	\section*{Problem 9.23}
+	\subsection*{(a)}
+		{\renewcommand{\arraystretch}{1.2} 
+	\begin{table}[h!tbp]
+  		\begin{center}
+    		\caption{Calculated Mean and Standard Deviation}
+    		\label{tab:table3}
+			
+    		\begin{tabular}{lccccc}
+				\hline
+				&\multicolumn{3}{c}{Time estimate (weeks)} &&\\\cline{2-4}
+				Activity & Optimistic & Most likely & Pessimistic & Mean & Std. Dev.\\
+				\hline
+				A & 25 & 30 & 45 & 31.7 & 3.33\\
+				B & 10 & 15 & 20 & 15.0 & 1.67\\
+				C & 20 & 25 & 35 & 25.8 & 2.50\\
+				D &  3 &  3 &  5 & 3.33 & 0.33\\
+				E &  5 &  7 & 12 & 7.50 & 1.17\\
+				F &  1 &  1 &  1 & 1.00 &    0\\
+				G &  4 &  5 &  7 & 5.17 & 0.50\\
+				H &  2 &  2 &  3 & 2.17 & 0.17\\
+				I &  4 &  4 &  6 & 4.33 & 0.33\\
+				J &  8 & 10 & 14 & 10.3 & 1.00\\
+				K &  6 &  8 & 15 & 8.83 & 1.50\\
+				\hline
+    		\end{tabular}
+  		\end{center}
+	\end{table}
+	}
+	\begin{center}
+	\makebox[\textwidth]{
+		\input{./Graphs/9-23Graph1}}
+	\end{center}
+	
+	\pagebreak
+	
+	\subsection*{(b)}
+	{\renewcommand{\arraystretch}{1.2} 
+	\begin{table}[h!tbp]
+  		\begin{center}
+    		\caption{Slacks for Buying Tom Cruise a Boat}
+    		\label{tab:table2}
+			
+    		\begin{tabular}{lcccccc}
+				 & Total Slack Eq &  &  & Free Slack Eq & &\\
+				Activity & LS - ES & = & Total Slack & Min\{ES$_{\text{Suc}}$\} - EF &= & Free Slack \\
+				\hline
+      			A  & 0.5-0  & = & 0.5  & 31.7-31.7 & = & 0 \\
+      			B  & 17.3-0 & = & 17.3 & 15-15     & = & 0 \\
+				C* &        &   & 0    &           &   & 0 \\
+				D  & 32.2-31.7  & = & 0.5   & 35-35 & = & 0 \\
+				E* &        &   & 0   &       &   & 0 \\
+				F  & 32.3-15  & = & 17.3  & 33.3-16 & = & 17.3\\
+				G  & 42.8-35  & = & 7.8   & 48-40.2 & = & 7.8 \\
+				H  & 35.5-35  & = & 0.5   & 37.7-37.2 & = & 0.5 \\
+				I* &        &   & 0   &       &   & 0 \\
+				J* &        &   & 0   &       &   & 0 \\
+				K* &        &   & 0   &       &   & 0 \\
+				\hline
+				\multicolumn{3}{c}{* = On the Critical Path}\\
+    		\end{tabular}
+  		\end{center}
+	\end{table}
+	}
+	
+	\noindent The slacks are slightly different, but the larger patterns still remain. Activities A,B, and D have some total slack, but none of it free. Activities F,G, and H have the same total slack and free slack, a pattern that continues from the previous estimate although the numbers have changed.
+	
+	\subsection*{(c)}
+	\noindent Critical Path: C-E-I-J-K\\
+	Mean Critical Path Time: 56.8 days\\
+	Standard Deviation Critical Path: 3.31\\
+	
+	\noindent The critical path has not changed activities, but the mean time to complete has gone up.
+	
+	\subsection*{(d)}
+	\subsubsection*{(1)}
+	\begin{equation*}
+		P\bigg(Z\le \frac{54-56.8}{3.31}\bigg) = 1 - P(Z \le 0.846) \cong 1 - 0.801 \approx 0.2
+	\end{equation*}
+	There is a 20\% chance that the project will be completed in 54 weeks or less.
+	
+	\subsubsection*{(2)}
+	\begin{equation*}
+		P\bigg(Z\le \frac{56.8-56.8}{3.31}\bigg) = P(Z \le 0) =  0.5
+	\end{equation*}
+	There is a 50\% chance that the project will be completed in the mean project time or less.
+	
+	\subsubsection*{(3)}
+	\begin{equation*}
+		P\bigg(Z\ge \frac{70-56.8}{3.31}\bigg) = 1 - P(Z \le 3.99) \cong 1 - 1 \approx 0
+	\end{equation*}
+	\begin{equation*}
+		P\bigg(Z\ge \frac{64-56.8}{3.31}\bigg) = 1 - P(Z \le 2.18) \cong 1 - 0.985 \approx 0.015
+	\end{equation*}
+	There is a near 0\% chance that the project will take longer than 70 weeks to complete.\\
+	There is a 1.5\% chance that the project will take 64 weeks or longer to complete.
+	
 \end{document}

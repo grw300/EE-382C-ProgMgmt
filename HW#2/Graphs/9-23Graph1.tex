@@ -5,19 +5,19 @@
   node distance=1.5cm,
   ]
   \node[circle, label=90:(0),] (S){Start};
-  \node[circle split, right = of S, label=90:{(0,15)}, label=270:{[16,31]}] (B) {B \nodepart{lower} 15};
-  \node[circle split, above = 1 of B, label=90:{(0,30)}, label=270:{[1,31]}] (A) {A \nodepart{lower} 30};
-  \node[circle split, below = 1 of B, label=90:{(0,25)}, label=270:{[0,25]}] (C) {C \nodepart{lower} 25};
-  \node[circle split, right = of A, label=90:{(30,33)}, label=270:{[31,34]}] (D) {D \nodepart{lower} 3};
-  \node[circle split, right = of C, label=90:{(25,32)}, label=270:{[25,32]}] (E) {E \nodepart{lower} 7};
-  \node[circle split, right = of B, label=90:{(15,16)}, label=270:{[31,32]}] (F) {F \nodepart{lower} 1};
-  \node[circle split, right = of D, label=90:{(33,38)}, label=270:{[41,46]}] (G) {G \nodepart{lower} 5};
-  \node[circle split, right = of F, label=90:{(33,35)}, label=270:{[34,36]}] (H) {H \nodepart{lower} 2};
-  \node[circle split, right = of E, label=90:{(32,36)}, label=270:{[32,36]}] (I) {I \nodepart{lower} 4};
-  \node[circle split, right = of H, label=90:{(36,46)}, label=270:{[36,46]}] (J) {J \nodepart{lower} 10};
-  \node[circle split, right = 3.5cm of G, label=90:{(46,54)}, label=270:{[46,54]}] (K) {K \nodepart{lower} 8};
-  \node[circle, right = 3cm of J, label=90:{(54)}] (End) {End};
-  
+  \node[circle split, right = of S, label=90:{(0,15)}, label=270:{[17.3,32.3]}] (B) {B \nodepart{lower} 15.0};
+  \node[circle split, above = 1 of B, label=90:{(0,31.7)}, label=270:{[0.5,32.2]}] (A) {A \nodepart{lower} 31.7};
+  \node[circle split, below = 1 of B, label=90:{(0,25.8)}, label=270:{[0,25.8]}] (C) {C \nodepart{lower} 25.8};
+  \node[circle split, right = of A, label=90:{(31.7,35.0)}, label=270:{[32.2,35.5]}] (D) {D \nodepart{lower} 3.33};
+  \node[circle split, right = of C, label=90:{(25.8,33.3)}, label=270:{[25.8,33.3]}] (E) {E \nodepart{lower} 7.50};
+  \node[circle split, right = of B, label=90:{(15,16)}, label=270:{[32.3,33.3]}] (F) {F \nodepart{lower} 1.00};
+  \node[circle split, right = of D, label=90:{(35.0,40.2)}, label=270:{[42.8,48.0]}] (G) {G \nodepart{lower} 5.17};
+  \node[circle split, right = of F, label=90:{(35.0,37.2)}, label=270:{[35.5,37.7]}] (H) {H \nodepart{lower} 2.17};
+  \node[circle split, right = of E, label=90:{(33.3,37.7)}, label=270:{[33.3,37.7]}] (I) {I \nodepart{lower} 4.33};
+  \node[circle split, right = of H, label=90:{(37.7,48.0)}, label=270:{[37.7,48.0]}] (J) {J \nodepart{lower} 10.3};
+  \node[circle split, right = 3.5cm of G, label=90:{(48.0,56.8)}, label=270:{[48.0,56.8]}] (K) {K \nodepart{lower} 8.83};
+  \node[circle, right = 3cm of J, label=90:{(56.8)}] (End) {End};
+
   
   \draw [->] (S) -- (A);
   \draw [->] (S) -- (B);
