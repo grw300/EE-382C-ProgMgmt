@@ -1,51 +1,32 @@
-
-\begin{tikzpicture}[
-  >=latex,
-  every node/.style={draw,inner sep=2pt,minimum size=1pt},
-  scale=0.5,
-  node distance=.65cm,
-  ]
-  \node[circle, label=90:(0),] (S){Start};
-  \node[circle split, right = of S, label=90:{(0,3)}, label=270:{(0,3)}] (A) {A \nodepart{lower} 3};
-  \node[circle split, below right = 3 and 3 of A, label=90:{(3,17)}, label=270:{[6,20]}] (B) {B \nodepart{lower} 14};
-  \node[circle split, right = of A, label=90:{(3,4)}, label=270:{[3,4]}] (C) {C \nodepart{lower} 1};
-  \node[circle split, above right = 1.2 and 1 of C, label=90:{(4,7)}, label=270:{[4,7]}] (D) {D \nodepart{lower} 3};
-  \node[circle split, right = of C, label=90:{(4,5)}, label=270:{[6,7]}] (E) {E \nodepart{lower} 1};
-  \node[circle split, below right = 1.2 and 1 of C, label=90:{(4,6)}, label=270:{[5,7]}] (F) {F \nodepart{lower} 2};
-  \node[circle split, right = of E, label=90:{(7,8)}, label=270:{[7,8]}] (G) {G \nodepart{lower} 1};
-  \node[circle split, right = of G, label=90:{(8,9)}, label=270:{[8,9]}] (H) {H \nodepart{lower} 1};
-  \node[circle split, right = of H, label=90:{(9,12)}, label=270:{[9,12]}] (I) {I \nodepart{lower} 3};
-  \node[circle split, above right = 1.2 and 1 of H, label=90:{(9,11)}, label=270:{[10,12]}] (J) {J \nodepart{lower} 2};
-  \node[circle split, right = of I, label=90:{(12,14)}, label=270:{[12,14]}] (K) {K \nodepart{lower} 2};
-  \node[circle split, right = of K, label=90:{(14,16)}, label=270:{[14,16]}] (L) {L \nodepart{lower} 2};
-  \node[circle split, above right = 1.2 and 1 of L, label=90:{(16,20)}, label=270:{[16,20]}] (M) {M \nodepart{lower} 4};
-  \node[circle split, right = of L, label=90:{(16,17)}, label=270:{[19,20]}] (N) {N \nodepart{lower} 1};
-  \node[circle split, right = of N, label=90:{(20,23)}, label=270:{[20,23]}] (O) {O \nodepart{lower} 3};
-  \node[circle, right = of O, label=90:{(23)}] (End) {End};
-  
-  
-  \draw [->] (S) -- (A);
-  \draw [->] (A) -- (B);
-  \draw [->] (A) -- (C);
-  \draw [->] (C) -- (D);
-  \draw [->] (C) -- (E);
-  \draw [->] (C) -- (F);
-  \draw [->] (D) -- (G);
-  \draw [->] (E) -- (G);
-  \draw [->] (F) -- (G);
-  \draw [->] (G) -- (H);
-  \draw [->] (H) -- (I);
-  \draw [->] (H) -- (J);
-  \draw [->] (C) -- (D);
-  \draw [->] (I) -- (K);
-  \draw [->] (J) -- (K);
-  \draw [->] (K) -- (L);
-  \draw [->] (L) -- (M);
-  \draw [->] (L) -- (N);
-  \draw [->] (B) -- (O);
-  \draw [->] (M) -- (O);
-  \draw [->] (N) -- (O);
-  \draw [->] (O) -- (End);
-  
-\end{tikzpicture}
-
+\begin{ganttchart}[vgrid,hgrid,
+	bar/.append style={fill=blue!50},
+	bar incomplete/.append style={fill=Maroon},
+	y unit chart=1.3cm,
+	x unit=0.4cm,
+	milestone top shift=-0.10
+	]{1}{54}
+  \gantttitle{Gantt Chart for 10.1}{54} \\
+  \gantttitlelist{1,...,54}{1} \\
+	%\ganttmilestone{}{8}
+	\ganttbar{A}{1}{30} \ganttbar[bar/.append style={fill=white}]{}{31}{31} \\ %LOL, just add another bar!
+	%\ganttmilestone{}{11}
+	\ganttbar{B}{1}{15} \ganttbar[bar/.append style={fill=white}]{}{16}{31}\\
+	%\ganttmilestone{}{0}
+	\ganttbar{C}{1}{25} \\
+	%\ganttmilestone{}{11}
+	\ganttbar{D}{31}{33} \ganttbar[bar/.append style={fill=white}]{}{34}{34}\\
+	%\ganttmilestone{}{5}
+	\ganttbar{E}{26}{32} \\
+	%\ganttmilestone{}{11}
+	\ganttbar{F}{16}{16} \ganttbar[bar/.append style={fill=gray!30}]{}{17}{32}\\
+	%\ganttmilestone{}{12}
+	\ganttbar{G}{34}{38} \ganttbar[bar/.append style={fill=gray!30}]{}{39}{46}\\
+	%\ganttmilestone{}{14}
+	\ganttbar{H}{34}{35} \ganttbar[bar/.append style={fill=gray!30}]{}{36}{36}\\
+	\ganttbar{I}{33}{36}\\
+	\ganttbar{J}{37}{46}\\
+	\ganttbar{K}{47}{54}
+	\ganttnewline[grid]{tEST}
+	\gantttitlelist[y unit title = 1.3cm, title/.style={draw=none, fill=none}]{1,2,3,5,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5}{1}
+\end{ganttchart}
+Resources
