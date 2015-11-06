@@ -1,9 +1,11 @@
 \documentclass{article}
+\usepackage[dvipsnames]{xcolor}
 \usepackage[margin=3.5cm]{geometry}   
 \usepackage{tikz,amsmath}
 \usepackage{pgfgantt}
 \usepackage{lscape}
 \usepackage{rotating}
+\usepackage{tabularx}
 \usetikzlibrary{arrows,shapes,positioning,shadows,trees}
 \usepackage[
   colorlinks=true,
@@ -17,13 +19,138 @@
 \begin{document}
 	\maketitle
 	\section*{Problem 10.1}
-	\begin{sidewaystable}[!htbp]
+	
+	%\begin{sidewaystable}[!htbp]
 		\input{./Graphs/10-1Graph1}
-	\end{sidewaystable}
+	%\end{sidewaystable}
 	\section*{Problem 10.2}
+	\subsection*{(a)}
+		\input{./Graphs/10-2Graph1}
+		\input{./Graphs/10-2Graph2}
+	\subsection*{(b)}
+	Both resource reduction techniques increased the overall project time by 2 weeks to 16 weeks by decoupling the critical path (C-I) to free up resources. The first prioritizes early start, and does not go over 20 hours, but does leave spaces of under utilized resources.
+	
+	The second prioritizes late starts, and while it still has pockets of under utilization, it isn't as dramatic as the early start prioritization.
+	\pagebreak
 	\section*{Problem 11.1}
+	{\renewcommand{\arraystretch}{1.2} 
+	\begin{sidewaystable}[!htbp]
+  		\begin{center}
+    		\caption{Cash Flow of Early Start Schedule}
+    		\label{tab:table1}
+			
+    		\begin{tabular}{rccccccccccccccc}
+				 & \multicolumn{13}{c}{Activity} &  &  \\
+				Week & A & B & C & D & E & F & G & H & I & J & K & L & M & Wk Cost, \$ & Cum. Cost, \$\\
+				\hline
+      			1 & \$1000 & \$500 & \$2000 &\multicolumn{10}{c}{} & \$3500 & \$3500\\
+      			2 & \$1000 & \$500 & \$2000 &\multicolumn{10}{c}{} & \$3500 & \$7000\\
+				3 & \$1000 & \$500 & \$2000 &\multicolumn{10}{c}{} & \$3500 & \$10500\\
+				4 &        & \$500 &        &\$1000 & & \$2000 & & & \$1000 & \multicolumn{4}{c}{} &\$4500 & \$15000\\
+				5 &\multicolumn{3}{c}{} &\$1000 & \$1000 & \$2000 & \$2000 & \$3000 & \$1000 & \multicolumn{4}{c}{} & \$10000 & \$25000\\
+				6 &\multicolumn{5}{c}{} & \$2000 & \$2000 & \$3000 & \$1000 & \$1000 & \multicolumn{3}{c}{} & \$9000 & \$34000\\
+				7 &\multicolumn{5}{c}{} & \$2000 & & \$3000 & \$1000 & \$1000& \multicolumn{3}{c}{} & \$7000 & \$41000\\
+				8 &\multicolumn{5}{c}{} & \$2000 & &  & \$1000 & \$1000& \multicolumn{3}{c}{} & \$4000 & \$45000\\
+				9 &\multicolumn{6}{c}{} & &  & \$1000 & & \$1000 & & \$2000& \$4000 & \$49000\\
+				10 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$52500\\
+				11 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$56000\\
+				12 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$59500\\
+				13 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & & \$1500 & \$61000\\
+				14 &\multicolumn{8}{c}{} & \$1000 & &  & & & \$1000 & \$62000\\
+				\hline
+    		\end{tabular}
+  		\end{center}
+	\end{sidewaystable}
+	}
+	
+		{\renewcommand{\arraystretch}{1.2} 
+	\begin{sidewaystable}[!htbp]
+  		\begin{center}
+    		\caption{Cash Flow of Late Start Schedule}
+    		\label{tab:table2}
+			
+    		\begin{tabular}{rccccccccccccccc}
+				 & \multicolumn{13}{c}{Activity} &  &  \\
+				Week & A & B & C & D & E & F & G & H & I & J & K & L & M & Wk Cost, \$ & Cum. Cost, \$\\
+				\hline
+      			1 &  &  & \$2000 &\multicolumn{10}{c}{} & \$2000 & \$2000\\
+      			2 & \$1000 &  & \$2000 &\multicolumn{10}{c}{} & \$3000 & \$5000\\
+				3 & \$1000 & \$500 & \$2000 &\multicolumn{10}{c}{} & \$3500 & \$8500\\
+				4 &    \$1000    & \$500 &        & & & & & & \$1000 & \multicolumn{4}{c}{} &\$2500 & \$11000\\
+				5 & & \$500 & & &  & \$2000 &  &  & \$1000 & \multicolumn{4}{c}{} & \$3500 & \$14500\\
+				6 & & \$500 & & \$1000 && \$2000 &  &  & \$1000 &  & \multicolumn{3}{c}{} & \$4500 & \$19000\\
+				7 &\multicolumn{3}{c}{}&  \$1000& \$1000 & \$2000 & &  & \$1000 & & \multicolumn{3}{c}{} & \$5000 & \$24000\\
+				8 &\multicolumn{5}{c}{} & \$2000 & \$2000&  \$3000& \$1000 & \$1000& \multicolumn{3}{c}{} & \$9000 & \$33000\\
+				9 &\multicolumn{5}{c}{} & \$2000&\$2000&  \$3000& \$1000 & \$1000& & & & \$9000 & \$42000\\
+				10 &\multicolumn{7}{c}{}&\$3000 & \$1000 & \$1000&  \$1000& & & \$6000 & \$48000\\
+				11 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$51500\\
+				12 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$55000\\
+				13 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$58500\\
+				14 &\multicolumn{8}{c}{} & \$1000 & &  & \$500& \$2000 & \$3500 & \$62000\\
+				\hline
+    		\end{tabular}
+  		\end{center}
+	\end{sidewaystable}
+	}
+	
+			{\renewcommand{\arraystretch}{1.2} 
+	\begin{sidewaystable}[!htbp]
+  		\begin{center}
+    		\caption{Cash Flow of Balances Schedule}
+    		\label{tab:table3}
+			
+    		\begin{tabular}{rccccccccccccccc}
+				 & \multicolumn{13}{c}{Activity} &  &  \\
+				Week & A & B & C & D & E & F & G & H & I & J & K & L & M & Wk Cost, \$ & Cum. Cost, \$\\
+				\hline
+      			1 & \$1000 & \$500 & \$2000 &\multicolumn{10}{c}{} & \$3500 & \$3500\\
+      			2 & \$1000 & \$500 & \$2000 &\multicolumn{10}{c}{} & \$3500 & \$7000\\
+				3 & \$1000 & \$500 & \$2000 &\multicolumn{10}{c}{} & \$3500 & \$10500\\
+				4 &        & \$500 &        & \$1000& &  \$2000 & & & \$1000 & \multicolumn{4}{c}{} &\$4500 & \$15000\\
+				5 & &  & & \$1000& \$1000 & \$2000 &  &  & \$1000 & \multicolumn{4}{c}{} & \$5000 & \$20000\\
+				6 & &  & &  && \$2000 & \$2000 &  & \$1000 &  & \multicolumn{3}{c}{} & \$5000 & \$25000\\
+				7 &\multicolumn{3}{c}{}&  &  & \$2000 & \$2000&  & \$1000 & & \multicolumn{3}{c}{} & \$5000 & \$30000\\
+				8 &\multicolumn{5}{c}{} & \$2000 & &  \$3000& \$1000 & \$1000& \multicolumn{3}{c}{} & \$7000 & \$37000\\
+				9 &\multicolumn{5}{c}{} & &&  \$3000& \$1000 & \$1000& & & & \$5000 & \$42000\\
+				10 &\multicolumn{7}{c}{}&\$3000 & \$1000 & \$1000&  \$1000& & & \$6000 & \$48000\\
+				11 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$51500\\
+				12 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$55000\\
+				13 &\multicolumn{8}{c}{} & \$1000 & &  &\$500 & \$2000& \$3500 & \$58500\\
+				14 &\multicolumn{8}{c}{} & \$1000 & &  & \$500& \$2000 & \$3500 & \$62000\\
+				\hline
+    		\end{tabular}
+  		\end{center}
+	\end{sidewaystable}
+	}
+	\pagebreak
 	\section*{Problem 11.3}
 		\subsection*{(b)}
+		The shortest amount of time the critical path can take is 10 days. The overhead formula says that the savings of crashing down that far would be $[2000 + 3 \times (14 \times 1000)] - [2000 + 3 \times ( 10 \times 1000)] = 12000$. But in order to get down that far, we would have to crash Task I, which would cost $8 * 1500 = 12000$; given that all of the savings from overhead are chewed up by crashing one task, there is no use in crashing any task other than task C, which reduces the time by 1 day and the total overhead cost by 3000, while only costing 1000 for a total project savings of 2000.
 	\section*{Problem 12.4}
+	\subsection*{(a)}
+	$EV = 0.5 * 8000 = 4000$
+	\subsection*{(b)}
+	$SI = EV/PV = 4000/(666.67*7) = 4000/4666.67 = 0.857$\\
+	$CI = EV/ACWP = 4000/4500 = 0.889$
+	\subsection*{(c)}
+	$EAC = BAC - CV = 8000 - (4000 - 4500) = 8500$\\
+	\subsection*{(D)}
+	$EAC = BAC \times ACWP/BCWP = 8000 \times 4500/4000 = 9000$
+	\subsection*{(E)}
+	The revised estimate approach assumes that the relative deviation in the cost of the work completed is a good estimate for the relative deviation of the work remaining. This mean that, because our task is currently behind schedule and over budget, we can expect that general trend to continue. The Original Estimate Approach assumes that our original estimates were good, and that there were some unforeseen risks that were not accounted for in the first half of the task, and that those delays will not carry forward into the rest of the work.
 	\section*{Problem 12.5}
+	\subsection*{(a)}
+	\input{./Graphs/12-5Graph1}
+	\\
+	After ten weeks, the project appears to be behind schedule given an early start gantt chart, but that doesn't mean that the project is in trouble just yet. This could be a delayed start scenario.
+	
+	\subsection*{(b)}
+	U1:\\
+	$SI = BCWP/BCWS = 165.5/215 = 0.77$\\
+	U2:\\
+	$SI = BCWP/BCWS = 185/230 = 0.80$\\
+	Whole:\\
+	$SI = BCWP/BCWS = 350.5/445 = 0.79$\\
+	
+	The whole project is behind schedule, but Unit 1 is the biggest drain on the schedule now. Seeing as Unit 1 is responsible for Task E, which lies on the critical path currently, it may make sense to balance the available resources across the teams again. Unless you've read The Mythical Man Month.
 \end{document}

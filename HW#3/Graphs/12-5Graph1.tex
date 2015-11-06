@@ -1,0 +1,29 @@
+\begin{ganttchart}[vgrid,hgrid,
+	bar/.append style={fill=blue!50},
+	bar incomplete/.append style={fill=Maroon},
+	y unit chart=1cm,
+	x unit=0.4cm,
+	milestone top shift=-0.10
+	]{1}{21}
+  \gantttitle{Gantt Chart for 12.5}{21} \\
+  \gantttitlelist{1,...,21}{1} \\
+	%\ganttmilestone{}{8}
+	\ganttbar[progress=100]{A}{1}{4} \\ %LOL, just add another bar!
+	%\ganttmilestone{}{11}
+	\ganttbar[progress=100]{B}{5}{6} \\
+	%\ganttmilestone{}{0}
+	\ganttbar[progress=40]{C}{5}{10} \\
+	%\ganttmilestone{}{11}
+	\ganttbar[progress=80]{D}{7}{9}\\
+	%\ganttmilestone{}{5}
+	\ganttbar[progress=0]{E}{11}{20}\\
+	%\ganttmilestone{}{11}
+	\ganttbar[progress=100]{F}{1}{2}  \\
+	%\ganttbar[bar/.append style={fill=gray!30}]{}{17}{32}\\
+	%\ganttmilestone{}{12}
+	\ganttbar[progress=50]{G}{3}{7}\\
+	%\ganttmilestone{}{14}
+	\ganttbar[progress=100]{H}{3}{9} \\
+	\ganttbar[progress=0]{I}{21}{21}\\
+	\ganttbar[progress=0]{J}{10}{19}
+\end{ganttchart}
