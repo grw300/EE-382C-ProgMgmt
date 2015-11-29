@@ -3,6 +3,8 @@
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{float}
+\usepackage{color}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}	
 
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
@@ -16,8 +18,75 @@
 	
 	\section*{1}
 	\subsection*{(a)}
-	\begin{table*}
-	\centering	\ra{1.3}	\begin{tabular}{@{}rrrrcrrrcrrr@{}} \toprule	& \multicolumn{3}{c}{$w = 8$} & \phantom{abc}& \multicolumn{3}{c}{$w = 16$} & \phantom{abc} & \multicolumn{3}{c}{$w = 32$}\\ \cmidrule{2-4} \cmidrule{6-8} \cmidrule{10-12}
-	& $t=0$ & $t=1$ & $t=2$ && $t=0$ & $t=1$ & $t=2$ && $t=0$ & $t=1$ & $t=2$\\ \midrule	$dir=1$\\	$c$ & 0.0790 & 0.1692 & 0.2945 && 0.3670 & 0.7187 & 3.1815 && -1.0032 & -1.7104 & -21.7969\\	$c$ & -0.8651& 50.0476& 5.9384&& -9.0714& 297.0923& 46.2143&& 4.3590& 34.5809& 76.9167\\	$c$ & 124.2756& -50.9612& -14.2721&& 128.2265& -630.5455& -381.0930&& -121.0518& -137.1210& -220.2500\\
-	$dir=0$\\	$c$ & 0.0357& 1.2473& 0.2119&& 0.3593& -0.2755& 2.1764&& -1.2998& -3.8202& -1.2784\\	$c$ & -17.9048& -37.1111& 8.8591&& -30.7381& -9.5952& -3.0000&& -11.1631& -5.7108& -15.6728\\	$c$ & 105.5518& 232.1160& -94.7351&& 100.2497& 141.2778& -259.7326&& 52.5745& 10.1098& -140.2130\\ \bottomrule	\end{tabular}	\caption{Caption}	\end{table*}
+
+	\begin{center}
+	\begin{table*}[ht!]
+	\centering
+	\ra{1.3}
+	\begin{tabular}{@{}lr@{}} \toprule
+	Item & \multicolumn{1}{c}{\$} \\
+	\midrule
+	Revenue & 18000\\
+	COGS 	& \color{red}6750\\  \midrule
+	\textbf{Gross Margin} & 11250\\
+	G\&A Costs & \color{red}6000\\
+	Depreciation & \color{red}750\\\midrule
+	\textbf{Net Income} & 4500\\ 
+	Income Tax (@ 30\%) & \color{red}1350\\ \midrule
+	\textbf{Net Income After Tax} & \textbf{3150}
+	\end{tabular}
+	\caption{Net Income After Tax}
+	\end{table*}
+	\end{center}
+	
+	\pagebreak
+	
+	\subsection*{(b)}
+
+	\begin{center}
+	\begin{table*}[ht!]
+	\centering
+	\ra{1.3}
+	\begin{tabular}{@{}lrlr@{}} \toprule
+	\textbf{Assests} && \textbf{Liabilities} & \\
+	\cmidrule{1-1}\cmidrule{3-3}
+	Cash & 15650 & Loan & 10000\\
+	Equipment 	& 7000 & \textbf{Total Liabilities} & 10000\\
+	Inventory & 2500 && \\
+	AR & 3000 & \textbf{Equity} &\\ \cmidrule{3-3}
+	&& Initial & 15000\\
+	&& Retained Earnings & 3150\\ 
+	&& \textbf{Total Equity} & 18500\\\midrule
+	&& \textbf{Total Liabilities +} &\\
+	\textbf{Total Assests} & 28150 & \textbf{Equity} & 28150\\
+	\end{tabular}
+	\caption{Balance Sheet}
+	\end{table*}
+	\end{center}
+
+	\subsection*{(c)}
+
+	\begin{center}
+	\begin{table*}[ht!]
+	\centering
+	\ra{1.3}
+	\begin{tabular}{@{}lr@{}} \toprule
+	Flows & \multicolumn{1}{c}{\$} \\
+	\midrule
+	Inward & \\ \cmidrule{1-1}
+	Loan & 10000\\
+	Collected Sales 	& 15000\\  \midrule
+	\textbf{In} & 25000\\
+	Outward & \\ \cmidrule{1-1}
+	Equipment & 8000\\
+	Product (2500 @ 4.50) & 9000\\
+	G\&A & 6000\\ 
+	Tax & 1350\\ \midrule
+	\textbf{Out} & 24350\\ 
+	\textbf{Net} & 650
+	\end{tabular}
+	\caption{Cash Flow}
+	\end{table*}
+	\end{center}
+
 \end{document}
