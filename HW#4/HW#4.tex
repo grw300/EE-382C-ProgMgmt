@@ -5,6 +5,7 @@
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{color}
+\usepackage{amsmath}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}	
 
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
@@ -88,5 +89,68 @@
 	\caption{Cash Flow}
 	\end{table*}
 	\end{center}
+	
+	\section*{2}
+	\subsection*{(a)}
+	\begin{align*}
+	PW &= 5000 \\
+	&+ 1000 [(P/F, 9\%, 1)+ (P/F, 9\%, 2) + (P/F, 9\%, 3)] \\
+	&+ 3000 [(P/F, 9\%, 4) + (P/F, 9\%, 5) + (P/F, 9\%, 6) + (P/F, 9\%, 7) + (P/F, 9\%, 8)] \\
+	&= 5000 + 1000 (2.53129) + 3000 (3.00353) \\
+	&= 16541.88
+	\end{align*}
 
+	\subsection*{(b)}
+	\begin{align*}
+		FW &= 5000 (F/P, 9\%, 8) \\ 
+		&+ 1000 [(F/P, 9\%, 7) + (F/P, 9\%, 6) + (F/P, 9\%, 5)] \\
+		&+ 3000 [(F/P, 9\%, 4) + (F/P, 9\%, 3) + (F/P, 9\%, 2) + (F/P, 9\%, 1) + (F/P, 9\%, 0)] \\
+		&= 5000 (1.99256) + 1000 (5.04376) + 3000 (5.98471) \\
+		&= 32960.69 \\
+	\end{align*}
+	
+	\section*{3}
+	\begin{align*}
+	F/A &= (F/A, 9\%, 18) = 41.30134 \\41.30134 A &= 20,000 [1 + (P/A, 9\%, 3)] 
+	\\41.30134 A &= 20,000 (3.53129) \\	A &= 1710.01
+	\end{align*}
+
+	\section*{4}
+	\begin{align*}
+	200,000/25,000 &= 8 yrs\\
+	NPW(9\%) &= \sum_{t=0}^{N}\frac{R_t}{(1+i)^t}\\
+	&= -200000 + 22935.78 + 21042.00 + 19304.59 \\
+	&+ 17710.63 + 16248.28 + 14906.68 + 13675.86 \\
+	&+ 12546.66 + 11510.69 + 10560.27 + 9688.32 \\
+	&+ 8888.37 + 8154.47 + 7481.16 + 6863.45 \\
+	&= -200000 + 201517.21\\
+	&= 1517.21
+	\end{align*}
+	
+	\section*{5}
+	
+	\begin{align*}
+	F/P &= 30000/12000  \\
+	&= 2.5\\IRR &= (F/P)^{1/6} - 1\\
+	&= 2.5^{1/6} -1 \\
+	&= 0.165 \rightarrow 16.5\%\\
+	NPW(9\%) &= \sum_{t=0}^{N}\frac{R_t}{(1+i)^t}\\
+	&= -200000 + 0 + 0 + 0 \\
+	&+ 0 + 0 + 17888.02 \\
+	&= -12000 + 17888.02\\
+	&= 5888.02
+	\end{align*}
+	
+	\section*{(6)}
+	\noindent We first find the $AEW$ for $A$:
+	\begin{align*}
+		AEW_{A} &= 600000 (A/P, 12\%, 3) - 320000 \\
+		&= 600000 (0.41635) - 320000 \\
+		&= -70190/yr
+	\intertext{\noindent We then find the $AEW$ for $B$:}
+		AEW_{B} &= 1000000 (A/P, 12\%, 4) - 200000 (A/F, 12\%, 4) - 350000 \\
+		&= 1000000(0.32923) - 200000 (0.20923) - 350000 \\
+		&= -62616/yr
+	\end{align*}
+	Thus choose A, since it will save the company more.
 \end{document}
